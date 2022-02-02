@@ -1,0 +1,240 @@
+body.body {
+    overflow: hidden;
+}
+body.body.pace-done {
+    overflow: auto;
+}
+
+/*!
+ * pace.js v1.2.4 | Default theme
+ * https://github.com/CodeByZach/pace/
+ * Licensed MIT © HubSpot, Inc.
+ */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+    animation: preload 1s linear alternate;
+}
+@keyframes preload {
+    0% {
+        display: flex;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.pace .pace-progress {
+    background: #D72630;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+
+.pace-done {
+    margin: 0;
+}
+
+/* theme style */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace.pace-inactive .pace-progress {
+    display: none;
+}
+
+.pace .pace-progress {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    height: 5rem;
+    width: 5rem;
+
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -ms-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    content: attr(data-progress-text);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    font-size: 5rem;
+    line-height: 1;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.19999999999999996);
+}
+
+
+/* main style */
+.pace, .pace.pace-inactive {
+    width: 100vw;
+    height: 100vh;
+    /*display: flex !important;*/
+    overflow: visible !important;
+    position: fixed !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.pace.pace-inactive .pace-progress {
+    display: flex;
+}
+
+.pace .pace-progress {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: linear-gradient(90.33deg, #713fdb 0%, #df3939 93.05%);*/
+    /*background-image: url("preload-bg.png");*/
+    background: #000 url("duble-bg.svg");
+    /*background-repeat: no-repeat;*/
+    /*background-color: #161616;*/
+    /*background-size: 200%;*/
+    background-position-x: 0;
+    background-position-y: 50%;
+    transition: background 1s linear;
+}
+
+.pace .pace-progress:after {
+    position: relative !important;
+    font-size: 120px;
+    line-height: 180px;
+    width: 100%;
+
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    right: 0;
+}
+
+/*.pace .pace-progress[data-progress-text="0%"] { background-position-x: -150vw; }*/
+/*.pace .pace-progress[data-progress-text="1%"] { background-position-x: -149vw; }*/
+/*.pace .pace-progress[data-progress-text="2%"] { background-position-x: -148vw; }*/
+/*.pace .pace-progress[data-progress-text="3%"] { background-position-x: -147vw; }*/
+/*.pace .pace-progress[data-progress-text="4%"] { background-position-x: -146vw; }*/
+/*.pace .pace-progress[data-progress-text="5%"] { background-position-x: -145vw; }*/
+/*.pace .pace-progress[data-progress-text="6%"] { background-position-x: -144vw; }*/
+/*.pace .pace-progress[data-progress-text="7%"] { background-position-x: -143vw; }*/
+/*.pace .pace-progress[data-progress-text="8%"] { background-position-x: -142vw; }*/
+/*.pace .pace-progress[data-progress-text="9%"] { background-position-x: -141vw; }*/
+/*.pace .pace-progress[data-progress-text="10%"] { background-position-x: -140vw; }*/
+/*.pace .pace-progress[data-progress-text="11%"] { background-position-x: -139vw; }*/
+/*.pace .pace-progress[data-progress-text="12%"] { background-position-x: -138vw; }*/
+/*.pace .pace-progress[data-progress-text="13%"] { background-position-x: -137vw; }*/
+/*.pace .pace-progress[data-progress-text="14%"] { background-position-x: -136vw; }*/
+/*.pace .pace-progress[data-progress-text="15%"] { background-position-x: -135vw; }*/
+/*.pace .pace-progress[data-progress-text="16%"] { background-position-x: -134vw; }*/
+/*.pace .pace-progress[data-progress-text="17%"] { background-position-x: -133vw; }*/
+/*.pace .pace-progress[data-progress-text="18%"] { background-position-x: -132vw; }*/
+/*.pace .pace-progress[data-progress-text="19%"] { background-position-x: -131vw; }*/
+/*.pace .pace-progress[data-progress-text="20%"] { background-position-x: -130vw; }*/
+/*.pace .pace-progress[data-progress-text="21%"] { background-position-x: -129vw; }*/
+/*.pace .pace-progress[data-progress-text="22%"] { background-position-x: -128vw; }*/
+/*.pace .pace-progress[data-progress-text="23%"] { background-position-x: -127vw; }*/
+/*.pace .pace-progress[data-progress-text="24%"] { background-position-x: -126vw; }*/
+/*.pace .pace-progress[data-progress-text="25%"] { background-position-x: -125vw; }*/
+/*.pace .pace-progress[data-progress-text="26%"] { background-position-x: -124vw; }*/
+/*.pace .pace-progress[data-progress-text="27%"] { background-position-x: -123vw; }*/
+/*.pace .pace-progress[data-progress-text="28%"] { background-position-x: -122vw; }*/
+/*.pace .pace-progress[data-progress-text="29%"] { background-position-x: -121vw; }*/
+/*.pace .pace-progress[data-progress-text="30%"] { background-position-x: -120vw; }*/
+/*.pace .pace-progress[data-progress-text="31%"] { background-position-x: -119vw; }*/
+/*.pace .pace-progress[data-progress-text="32%"] { background-position-x: -118vw; }*/
+/*.pace .pace-progress[data-progress-text="33%"] { background-position-x: -117vw; }*/
+/*.pace .pace-progress[data-progress-text="34%"] { background-position-x: -116vw; }*/
+/*.pace .pace-progress[data-progress-text="35%"] { background-position-x: -115vw; }*/
+/*.pace .pace-progress[data-progress-text="36%"] { background-position-x: -114vw; }*/
+/*.pace .pace-progress[data-progress-text="37%"] { background-position-x: -113vw; }*/
+/*.pace .pace-progress[data-progress-text="38%"] { background-position-x: -112vw; }*/
+/*.pace .pace-progress[data-progress-text="39%"] { background-position-x: -111vw; }*/
+/*.pace .pace-progress[data-progress-text="40%"] { background-position-x: -110vw; }*/
+/*.pace .pace-progress[data-progress-text="41%"] { background-position-x: -109vw; }*/
+/*.pace .pace-progress[data-progress-text="42%"] { background-position-x: -108vw; }*/
+/*.pace .pace-progress[data-progress-text="43%"] { background-position-x: -107vw; }*/
+/*.pace .pace-progress[data-progress-text="44%"] { background-position-x: -106vw; }*/
+/*.pace .pace-progress[data-progress-text="45%"] { background-position-x: -105vw; }*/
+/*.pace .pace-progress[data-progress-text="46%"] { background-position-x: -104vw; }*/
+/*.pace .pace-progress[data-progress-text="47%"] { background-position-x: -103vw; }*/
+/*.pace .pace-progress[data-progress-text="48%"] { background-position-x: -102vw; }*/
+/*.pace .pace-progress[data-progress-text="49%"] { background-position-x: -101vw; }*/
+/*.pace .pace-progress[data-progress-text="50%"] { background-position-x: -100vw; }*/
+/*.pace .pace-progress[data-progress-text="51%"] { background-position-x: -99vw; }*/
+/*.pace .pace-progress[data-progress-text="52%"] { background-position-x: -98vw; }*/
+/*.pace .pace-progress[data-progress-text="53%"] { background-position-x: -97vw; }*/
+/*.pace .pace-progress[data-progress-text="54%"] { background-position-x: -96vw; }*/
+/*.pace .pace-progress[data-progress-text="55%"] { background-position-x: -95vw; }*/
+/*.pace .pace-progress[data-progress-text="56%"] { background-position-x: -94vw; }*/
+/*.pace .pace-progress[data-progress-text="57%"] { background-position-x: -93vw; }*/
+/*.pace .pace-progress[data-progress-text="58%"] { background-position-x: -92vw; }*/
+/*.pace .pace-progress[data-progress-text="59%"] { background-position-x: -91vw; }*/
+/*.pace .pace-progress[data-progress-text="60%"] { background-position-x: -90vw; }*/
+/*.pace .pace-progress[data-progress-text="61%"] { background-position-x: -89vw; }*/
+/*.pace .pace-progress[data-progress-text="62%"] { background-position-x: -88vw; }*/
+/*.pace .pace-progress[data-progress-text="63%"] { background-position-x: -87vw; }*/
+/*.pace .pace-progress[data-progress-text="64%"] { background-position-x: -86vw; }*/
+/*.pace .pace-progress[data-progress-text="65%"] { background-position-x: -85vw; }*/
+/*.pace .pace-progress[data-progress-text="66%"] { background-position-x: -84vw; }*/
+/*.pace .pace-progress[data-progress-text="67%"] { background-position-x: -83vw; }*/
+/*.pace .pace-progress[data-progress-text="68%"] { background-position-x: -82vw; }*/
+/*.pace .pace-progress[data-progress-text="69%"] { background-position-x: -81vw; }*/
+/*.pace .pace-progress[data-progress-text="70%"] { background-position-x: -80vw; }*/
+/*.pace .pace-progress[data-progress-text="71%"] { background-position-x: -79vw; }*/
+/*.pace .pace-progress[data-progress-text="72%"] { background-position-x: -78vw; }*/
+/*.pace .pace-progress[data-progress-text="73%"] { background-position-x: -77vw; }*/
+/*.pace .pace-progress[data-progress-text="74%"] { background-position-x: -76vw; }*/
+/*.pace .pace-progress[data-progress-text="75%"] { background-position-x: -75vw; }*/
+/*.pace .pace-progress[data-progress-text="76%"] { background-position-x: -74vw; }*/
+/*.pace .pace-progress[data-progress-text="77%"] { background-position-x: -73vw; }*/
+/*.pace .pace-progress[data-progress-text="78%"] { background-position-x: -72vw; }*/
+/*.pace .pace-progress[data-progress-text="79%"] { background-position-x: -71vw; }*/
+/*.pace .pace-progress[data-progress-text="80%"] { background-position-x: -70vw; }*/
+/*.pace .pace-progress[data-progress-text="81%"] { background-position-x: -69vw; }*/
+/*.pace .pace-progress[data-progress-text="82%"] { background-position-x: -68vw; }*/
+/*.pace .pace-progress[data-progress-text="83%"] { background-position-x: -67vw; }*/
+/*.pace .pace-progress[data-progress-text="84%"] { background-position-x: -66vw; }*/
+/*.pace .pace-progress[data-progress-text="85%"] { background-position-x: -65vw; }*/
+/*.pace .pace-progress[data-progress-text="86%"] { background-position-x: -64vw; }*/
+/*.pace .pace-progress[data-progress-text="87%"] { background-position-x: -63vw; }*/
+/*.pace .pace-progress[data-progress-text="88%"] { background-position-x: -62vw; }*/
+/*.pace .pace-progress[data-progress-text="89%"] { background-position-x: -61vw; }*/
+/*.pace .pace-progress[data-progress-text="90%"] { background-position-x: -60vw; }*/
+/*.pace .pace-progress[data-progress-text="91%"] { background-position-x: -59vw; }*/
+/*.pace .pace-progress[data-progress-text="92%"] { background-position-x: -58vw; }*/
+/*.pace .pace-progress[data-progress-text="93%"] { background-position-x: -57vw; }*/
+/*.pace .pace-progress[data-progress-text="94%"] { background-position-x: -56vw; }*/
+/*.pace .pace-progress[data-progress-text="95%"] { background-position-x: -55vw; }*/
+/*.pace .pace-progress[data-progress-text="96%"] { background-position-x: -54vw; }*/
+/*.pace .pace-progress[data-progress-text="97%"] { background-position-x: -53vw; }*/
+/*.pace .pace-progress[data-progress-text="98%"] { background-position-x: -52vw; }*/
+/*.pace .pace-progress[data-progress-text="99%"] { background-position-x: -51vw; }*/
+/*.pace .pace-progress[data-progress-text="100%"] { background-position-x: -50vw; }*/
